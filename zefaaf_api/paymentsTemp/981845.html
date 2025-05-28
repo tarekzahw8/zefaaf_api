@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACS Emulator</title>
+
+    <link rel="stylesheet" type="text/css" href="https://syd-stripe2.ap.gateway.mastercard.com/acs/style/style.css" />
+</head>
+
+<body id="welcome">
+    <div id="ContainerOuterBorder">
+        <div id="ContainerMain">
+            <div id="ContainerHeader">
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <center>
+                                <h1>ACS Emulator</h1>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="ContainerNav">&nbsp;</div>
+            <div id="ContainerContent">
+                <br />
+                <center>
+
+                    <form method="post" action="https://api.vapulus.com/transaction/request3Ds/callback?transactionId=8fae5a77-94e8-466c-810e-5f4bb6ad28a9">
+                        <table>
+                            <tr>
+                                <td align="right"><b>Merchant Name:</b></td>
+                                <td align="left" id="parResMerchName">Vapulus Payments Technolo</td>
+                            </tr>
+                            <tr>
+                                <td align="right"><b>Merchant URL:</b></td>
+                                <td align="left" id="parResMerchUrl">https://www.vapulus.com/business/</td>
+                            </tr>
+                            <tr>
+                                <td align="right"><b>Amount:</b></td>
+                                <td align="left" id="parResAmount">EGP 314.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right"><b>Date:</b></td>
+                                <td align="left" id="parResDate">Thu Mar 25 2021 12:53:02 GMT+0000 (Coordinated Universal Time)></td>
+                            </tr>
+                            <tr>
+                                <td align="right"><b>Card Number:</b></td>
+                                <td align="left" id="parResCardMember">4508750015741019</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="right"><b>Authentication Result:</b></td>
+                                <td align="left">
+                                    <select id="selectAuthResult" name="selectAuthResult">
+
+                                        <option value="AUTHENTICATED" id="AUTHENTICATED">(Y) Authentication Successful
+                                        </option>
+
+                                        <option value="UNAUTHENTICATED" id="UNAUTHENTICATED">(N) Authentication Failed
+                                        </option>
+
+                                        <option value="UNAVAILABLE" id="UNAVAILABLE">(X or U) Authentication Not
+                                            Available</option>
+
+                                        <option value="ATTEMPTED" id="ATTEMPTED">(M) Authentication Attempted</option>
+
+                                        <option value="UNPARSABLE_RESPONSE" id="UNPARSABLE_RESPONSE">(P) Error Parsing
+                                            Authentication Response</option>
+
+                                        <option value="INVALID_RESPONSE_SIGNATURE" id="INVALID_RESPONSE_SIGNATURE">(S)
+                                            Invalid Signature on Authentication Response</option>
+
+                                        <option value="PROCESSING_ERROR" id="PROCESSING_ERROR">(I) MPI Processing Error
+                                        </option>
+
+                                        <option value="ATTEMPTED_NO_CAVV" id="ATTEMPTED_NO_CAVV">(M) Authentication
+                                            Attempted (No CAVV)</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right"><b>Split PaRes:</b></td>
+                                <td align="left">
+                                    <input type="checkbox" value="selectSplitAuthResult" name="selectSplitAuthResult" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right"><b>Custom ECI:</b></td>
+                                <td align="left">
+                                    <input type="text" value="" name="customEci" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right"><b>Custom CAVV:</b></td>
+                                <td align="left">
+                                    <input type="text" value="" name="customCavv" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="right"><input type="submit" value="Submit" /></td>
+                            </tr>
+                        </table>
+                        <input type="hidden" name="PaRes"
+                            value="eAFVkm9vgjAQxt8v8TsQsrezLQKCOWucZpnJNtlEt7cMGiGRoqX459vvijq3d32e613vflcYHcuNtReqLio5tFmX2paQaZUVcj20l/HTQ2CPeOcO4lwJMV2ItFGCw6uo62QtrCLDHEopo6HvMz90bQ7R+EPsOFxqcizZdYBcJaaqNE+k5pCku8fZG/dYEFIXyEVCKdRsylfjaPmyXAA5S5BJKfgq2Tabprai5FQKqWsrFmkuq00FpI1DWjVSqxMPWADkKqBRG55rva0HhBwOh+7+XKabViX5bupC4jQEiLkG5NZf1JhOaxz3WGT8fT7ZaRGWKvZ1Vsz2n3O68vyvtRe7QyDmBmSJFtyhLKR9GljMHdBg4PaAtD4kpWmOLxdT6x6hoH9xYGseGp/DzAT+GoDEFa4Eh3IpDnVVII7bSiIFjnR/z0BuXU+eDeNUI02POT3X8/tI2px8Q7sNmCoFAnMY9doyRgAxqeSySCTSLhudf5+gc/cDzXu7XA==" />
+                    </form>
+
+                </center>
+            </div>
+            <div id="ContainerFooter">&nbsp;</div>
+        </div>
+    </div>
+</body>
+
+</html>
